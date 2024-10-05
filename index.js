@@ -1,21 +1,21 @@
-let characters = [];
+let characters = [];
 
-const noSymbolAndNumbersCharacters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
+const noSymbolAndNumbersCharacters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
 
-const noSymbolsCharacters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+const noSymbolsCharacters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 
-const noNumbersCharacters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z","~","`","!","@","#","$","%","^","&","*","(",")","_","-","+","=","{","[","}","]",",","|",":",";","<",">",".","?","/"];
+const noNumbersCharacters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z","~","`","!","@","#","$","%","^","&","*","(",")","_","-","+","=","{","[","}","]",",","|",":",";","<",">",".","?","/"];
 
-const allCharacters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9","~","`","!","@","#","$","%","^","&","*","(",")","_","-","+","=","{","[","}","]",",","|",":",";","<",">",".","?","/"];
+const allCharacters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9","~","`","!","@","#","$","%","^","&","*","(",")","_","-","+","=","{","[","}","]",",","|",":",";","<",">",".","?","/"];
 
 let noNumbers = false
-let noNumbersButton = document.getElementById("no-numbers")
+const noNumbersButton = document.getElementById("no-numbers")
 let noSymbols = false
-let noSymbolsButton = document.getElementById("no-symbols")
+const noSymbolsButton = document.getElementById("no-symbols")
 let passwordLength = 15
-let generatePasswords = document.getElementById("generate-passwords")
-let passwordOne = document.getElementById("password-one")
-let passwordTwo = document.getElementById("password-two")
+const generatePasswords = document.getElementById("generate-passwords")
+const passwordOne = document.getElementById("password-one")
+const passwordTwo = document.getElementById("password-two")
 
 noNumbersButton.addEventListener("click", function(){
     if(noNumbers === false){
@@ -51,7 +51,7 @@ function selectedCharacters(){
 }
 
 function limitCharacters(){
-   let limitCharactersValue = document.getElementById("password-length").value
+   const limitCharactersValue = document.getElementById("password-length").value
    if(limitCharactersValue === ""){
         passwordLength = 15
     } else if(limitCharactersValue <= 15){
@@ -68,11 +68,11 @@ generatePasswords.addEventListener("click", function(){
    selectedCharacters()
    limitCharacters() 
     for(i = 0; i < passwordLength; i++){
-        let randomNumber = Math.floor(Math.random() * characters.length)
+        const randomNumber = Math.floor(Math.random() * characters.length)
         passwordOne.textContent += characters[randomNumber]
     }
     for(i = 0; i < passwordLength; i++){
-        let randomNumber = Math.floor(Math.random() * characters.length)
+        const randomNumber = Math.floor(Math.random() * characters.length)
         passwordTwo.textContent += characters[randomNumber]
     }
 })
