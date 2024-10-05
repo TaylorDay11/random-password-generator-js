@@ -1,0 +1,100 @@
+body {
+    margin: 0;
+    color: #FFF;
+    width: 550px;
+    height: 550px;
+    flex-shrink: 0;
+}
+
+#container{
+    max-width:550px;
+    max-height:550px;
+    padding:70px 52px;
+    background: #1F2937;
+}
+
+h1{
+    font-family: Karla;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 40px; /* 100% */
+    letter-spacing: -1px;
+    margin-bottom:-15px;
+    margin-top:0px;
+}
+
+h1 #green{
+    color: #4ADF86;
+}
+
+p{
+    color: #D5D4D8;
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 28px;
+}
+
+input{
+    width: 45px;
+    margin-left: 5px;
+    border-radius: 6px;
+    background: #273549;
+    border: none;
+    color: #FFF;
+    padding: 5px 10px;
+    font-weight: 300;
+}
+
+button{
+    margin:10px 10px 15px 0px;
+    font-family: Inter;
+    border: none;
+    display: inline-flex;
+    padding: 9px 17px 9px 15px;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    border-radius: 6px;
+    background: #10B981;
+    color: #FFF;
+}
+
+button:hover{
+    background: #2F3E53;
+    cursor: pointer;
+    color: #D5D4D8;
+}
+
+.selected{
+    background: #2F3E53;
+    color: #D5D4D8;
+}
+
+#horizontal-line{
+    background: #2F3E53;
+    margin-top: 30px;
+}
+
+#container div{
+    width: 211px;
+    height: 39px;
+    flex-shrink: 0;
+    border-radius: 6px;
+    background: #2F3E53;
+    display: inline-block;
+    margin-top: 35px;
+    text-align: center;
+}
+
+#password-one-box{
+    margin-right: 19px;
+}
+
+#password-one, #password-two{
+    margin-top: 6px;
+    color: #55F991;
+    display: relative;
+}
